@@ -36,7 +36,7 @@ export function decodeContent(content) {
 }
 
 export class GithubStore {
-  constructor(config, token = '', request = fetch) {
+  constructor(config, token = '', request = (...args) => fetch(...args)) {
     if (!/^[a-zA-Z0-9-]+$/.test(config.owner) || !/^[a-zA-Z0-9_.-]+$/.test(config.repo)) throw new Error('请填写正确的 GitHub 用户名和仓库名称。');
     this.config = config;
     this.token = token;

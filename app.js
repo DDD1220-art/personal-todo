@@ -1,4 +1,4 @@
-import { GithubStore, localDate, validDate, sortTasks } from './core.js';
+import { GithubStore, localDate, validDate, sortTasks } from './core.js?v=2';
 
 const $ = id => document.getElementById(id);
 const defaults = { ...window.TODO_CONFIG };
